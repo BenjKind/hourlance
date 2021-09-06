@@ -2,7 +2,7 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="vertical"
     android:background="@color/teal_700">
 
@@ -11,8 +11,7 @@
         android:layout_height="60dp"
         android:layout_marginTop="16dp"
         android:layout_marginStart="16dp"
-        android:src="@drawable/ic_baseline_person_24"
-        android:background="@color/underLine"/>
+        android:src="@drawable/ic_baseline_person_24"/>
 
     <TextView
         android:layout_width="match_parent"
@@ -21,8 +20,8 @@
         android:layout_marginStart="16dp"
         android:id="@+id/user_name"
         android:paddingTop="8dp"
-        android:textSize="20dp"
-        android:text="John Doe"
+        android:textSize="20sp"
+        android:text="@string/user_userName"
         android:textColor="@color/black"
         android:textStyle="bold"/>
 
@@ -30,8 +29,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:textSize="16dp"
-        android:text="johndoe@fullsail.edu"/>
+        android:textSize="16sp"
+        android:text="@string/user_userEmail"/>
 
     <TextView
         android:layout_width="match_parent"
