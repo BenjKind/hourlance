@@ -8,20 +8,21 @@
     tools:context=".MainActivity"
     android:id="@+id/drawerLayout">
 
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        android:visibility="visible"
+        app:headerLayout="@layout/nav_header"
+        app:menu="@menu/nav_menu" />
+
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".MainActivity">
-
-        <com.google.android.material.navigation.NavigationView
-            android:id="@+id/nav_view"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_gravity="start"
-            android:fitsSystemWindows="true"
-            android:visibility="visible"
-            app:headerLayout="@layout/nav_header"
-            app:menu="@menu/nav_menu" />
 
         <com.google.android.material.appbar.AppBarLayout
             android:layout_width="match_parent"
@@ -33,7 +34,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
                 android:background="?attr/colorPrimary"
-                app:popupTheme="@style/Theme.HourLance.PopupOverlay" />
+                app:popupTheme="@style/Theme.HourLance.PopupOverlay"
+                app:navigationIcon="@drawable/ic_baseline_menu_24"/>
 
         </com.google.android.material.appbar.AppBarLayout>
 
