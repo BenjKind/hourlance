@@ -14,6 +14,9 @@
         <action
             android:id="@+id/action_FirstFragment_to_SecondFragment"
             app:destination="@id/SecondFragment" />
+        <action
+            android:id="@+id/action_FirstFragment_to_newTimeEntryFragment"
+            app:destination="@id/newTimeEntryFragment" />
     </fragment>
     <fragment
         android:id="@+id/SecondFragment"
@@ -23,6 +26,17 @@
 
         <action
             android:id="@+id/action_SecondFragment_to_FirstFragment"
+            app:destination="@id/FirstFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newTimeEntryFragment"
+        android:name="com.example.hourlance.NewTimeEntryFragment"
+        android:label="@string/new_time_entry_label"
+        tools:layout="@layout/fragment_new_time_entry">
+
+
+        <action
+            android:id="@+id/action_newTimeEntryFragment_to_FirstFragment"
             app:destination="@id/FirstFragment" />
     </fragment>
 </navigation>
