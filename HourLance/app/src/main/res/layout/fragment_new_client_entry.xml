@@ -1,14 +1,246 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".NewClientEntryFragment">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:id="@+id/textNewClientClientName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:text="Client Name:"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.044"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textNewClientProjectType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Project Type:"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.044"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textNewClientClientName" />
+
+    <TextView
+        android:id="@+id/textNewClientHourlyRate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Rate / hour:"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.049"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textNewClientProjectType" />
+
+    <TextView
+        android:id="@+id/textNewClientOvertimeRate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Overtime rate:"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.045"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textNewClientHourlyRate" />
+
+    <TextView
+        android:id="@+id/textNewClientClientContactTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:text="Client Contact"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.046"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textNewClientOvertimeRate" />
+
+    <TextView
+        android:id="@+id/textNewClientContactName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.045"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textNewClientClientContactTitle" />
+
+    <TextView
+        android:id="@+id/textNewClientContactPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Phone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.045"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textNewClientContactName" />
+
+    <TextView
+        android:id="@+id/textNewClientContactEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Email"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.044"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textNewClientContactPhone" />
+
+    <TextView
+        android:id="@+id/textNewClientContactAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Address"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.046"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textNewClientContactEmail" />
+
+    <TextView
+        android:id="@+id/textNewClientContactWebsite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Website"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.049"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textNewClientContactAddress" />
+
+    <EditText
+        android:id="@+id/enterClientName"
+        android:layout_width="240dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="30dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:text="Name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:selectAllOnFocus="true"/>
+
+    <EditText
+        android:id="@+id/enterProjectType"
+        android:layout_width="240dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="104dp"
+        android:layout_marginEnd="30dp"
+        android:ems="10"
+        android:inputType="textNoSuggestions"
+        android:minHeight="48dp"
+        android:text="Type"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:selectAllOnFocus="true"/>
+
+    <EditText
+        android:id="@+id/enterHourlyRate"
+        android:layout_width="240dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="152dp"
+        android:layout_marginEnd="30dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:minHeight="48dp"
+        android:text="Rate/hour"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:selectAllOnFocus="true"/>
+
+    <EditText
+        android:id="@+id/enterOvertimeRate"
+        android:layout_width="240dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="200dp"
+        android:layout_marginEnd="30dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:minHeight="48dp"
+        android:text="Overtime rate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:selectAllOnFocus="true"/>
+
+    <EditText
+        android:id="@+id/enterContactName"
+        android:layout_width="240dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="332dp"
+        android:layout_marginEnd="30dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:text="Client"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:selectAllOnFocus="true"/>
+
+    <EditText
+        android:id="@+id/enterContactPhone"
+        android:layout_width="240dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="380dp"
+        android:layout_marginEnd="30dp"
+        android:ems="10"
+        android:inputType="phone"
+        android:minHeight="48dp"
+        android:text="Phone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:selectAllOnFocus="true"/>
+
+    <EditText
+        android:id="@+id/enterContactEmail"
+        android:layout_width="240dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="428dp"
+        android:layout_marginEnd="30dp"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:minHeight="48dp"
+        android:text="Email"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:selectAllOnFocus="true"/>
+
+    <EditText
+        android:id="@+id/enterContactAddress"
+        android:layout_width="240dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="476dp"
+        android:layout_marginEnd="30dp"
+        android:ems="10"
+        android:inputType="textPostalAddress"
+        android:minHeight="48dp"
+        android:text="Address"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:selectAllOnFocus="true"/>
+
+    <EditText
+        android:id="@+id/enterContactWebsite"
+        android:layout_width="240dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="524dp"
+        android:layout_marginEnd="30dp"
+        android:ems="10"
+        android:inputType="textNoSuggestions"
+        android:minHeight="48dp"
+        android:text="Website"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:selectAllOnFocus="true"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

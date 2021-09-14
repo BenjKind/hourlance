@@ -27,15 +27,16 @@
             android:id="@+id/appBarLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:theme="@style/Theme.HourLance.AppBarOverlay">
+            android:theme="@style/Theme.HourLance.AppBarOverlay"
+            app:layout_constraintTop_toTopOf="parent"
+            app:navigationIcon="@drawable/ic_baseline_menu_24">
 
             <androidx.appcompat.widget.Toolbar
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
                 android:background="?attr/colorPrimary"
-                app:navigationIcon="@drawable/ic_baseline_menu_24"
-                app:popupTheme="@style/Theme.HourLance.PopupOverlay" />
+                app:navigationIcon="@drawable/ic_baseline_menu_24"/>
 
         </com.google.android.material.appbar.AppBarLayout>
 
@@ -43,7 +44,6 @@
             android:id="@+id/include"
             layout="@layout/content_main"
             tools:layout_editor_absoluteX="0dp"
-            tools:layout_editor_absoluteY="0dp" />
-
+            tools:layout_editor_absoluteY="0dp"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.drawerlayout.widget.DrawerLayout>

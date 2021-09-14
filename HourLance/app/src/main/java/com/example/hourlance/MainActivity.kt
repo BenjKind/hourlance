@@ -16,6 +16,7 @@ import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.NavController
+import androidx.navigation.fragment.findNavController
 import com.example.hourlance.databinding.ActivityMainBinding
 import com.google.android.material.navigation.NavigationView
 
@@ -54,7 +55,7 @@ class MainActivity : AppCompatActivity() {
                     "Clicked Dashboard",
                     Toast.LENGTH_SHORT
                 ).show()
-                R.id.nav_clients -> Toast.makeText(
+                    R.id.nav_clients -> Toast.makeText(
                     applicationContext,
                     "Clicked Clients",
                     Toast.LENGTH_SHORT
@@ -84,6 +85,12 @@ class MainActivity : AppCompatActivity() {
         val navController = findNavController(R.id.nav_host_fragment_content_main)
         appBarConfiguration = AppBarConfiguration(navController.graph)
         setupActionBarWithNavController(navController, appBarConfiguration)
+
+         fun onCreateOptionsMenu(menu: Menu): Boolean {
+            // Inflate the menu; this adds items to the action bar if it is present.
+            menuInflater.inflate(R.menu.menu_main, menu)
+            return true
+        }
 
         fun onOptionsItemSelected(item: MenuItem): Boolean {
             // Handle action bar item clicks here. The action bar will
