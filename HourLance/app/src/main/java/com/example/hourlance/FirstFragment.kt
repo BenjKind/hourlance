@@ -29,8 +29,24 @@ class FirstFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.buttonFirst.setOnClickListener {
-            findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)
+        binding.newTimeEntryButton.setOnClickListener {
+            findNavController().navigate(R.id.action_FirstFragment_to_newTimeEntryFragment)
+        }
+
+        binding.newClientEntryButton.setOnClickListener {
+            findNavController().navigate(R.id.action_FirstFragment_to_newClientEntryFragment)
+        }
+
+        binding.mainNewButton.setOnClickListener {
+
+            if (binding.newTimeEntryButton.visibility == View.INVISIBLE) {
+                binding.newTimeEntryButton.visibility = View.VISIBLE
+                binding.newClientEntryButton.visibility = View.VISIBLE
+            } else {
+                binding.newTimeEntryButton.visibility = View.INVISIBLE
+                binding.newClientEntryButton.visibility = View.INVISIBLE
+            }
+
         }
     }
 

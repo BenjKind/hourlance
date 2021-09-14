@@ -1,6 +1,8 @@
 package com.example.hourlance
 
 import android.os.Bundle
+import androidx.fragment.app.Fragment
+import android.view.LayoutInflater
 import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
@@ -13,6 +15,7 @@ import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.drawerlayout.widget.DrawerLayout
+import androidx.navigation.NavController
 import com.example.hourlance.databinding.ActivityMainBinding
 import com.google.android.material.navigation.NavigationView
 
@@ -81,17 +84,6 @@ class MainActivity : AppCompatActivity() {
         val navController = findNavController(R.id.nav_host_fragment_content_main)
         appBarConfiguration = AppBarConfiguration(navController.graph)
         setupActionBarWithNavController(navController, appBarConfiguration)
-
-        binding.mainNewButton.setOnClickListener {
-
-            if (binding.newTimeEntryButton.visibility == View.INVISIBLE) {
-                binding.newTimeEntryButton.visibility = View.VISIBLE
-                binding.newClientEntryButton.visibility = View.VISIBLE
-            } else {
-                binding.newTimeEntryButton.visibility = View.INVISIBLE
-                binding.newClientEntryButton.visibility = View.INVISIBLE
-            }
-        }
 
         fun onOptionsItemSelected(item: MenuItem): Boolean {
             // Handle action bar item clicks here. The action bar will
