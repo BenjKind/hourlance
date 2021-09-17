@@ -45,6 +45,7 @@ class MainActivity : AppCompatActivity() {
             R.string.navigation_drawer_open,
             R.string.navigation_drawer_close
         )
+
         drawerLayout.addDrawerListener(toggle)
         toggle.syncState()
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
@@ -55,7 +56,7 @@ class MainActivity : AppCompatActivity() {
                     "Clicked Dashboard",
                     Toast.LENGTH_SHORT
                 ).show()
-                    R.id.nav_clients -> Toast.makeText(
+                R.id.nav_clients -> Toast.makeText(
                     applicationContext,
                     "Clicked Clients",
                     Toast.LENGTH_SHORT
@@ -78,21 +79,21 @@ class MainActivity : AppCompatActivity() {
             }
             true
         }
-        //
-
         setSupportActionBar(binding.toolbar)
 
         val navController = findNavController(R.id.nav_host_fragment_content_main)
         appBarConfiguration = AppBarConfiguration(navController.graph)
         setupActionBarWithNavController(navController, appBarConfiguration)
+    }
+        //
 
-         fun onCreateOptionsMenu(menu: Menu): Boolean {
+        override fun onCreateOptionsMenu(menu: Menu): Boolean {
             // Inflate the menu; this adds items to the action bar if it is present.
             menuInflater.inflate(R.menu.menu_main, menu)
             return true
         }
 
-        fun onOptionsItemSelected(item: MenuItem): Boolean {
+        override fun onOptionsItemSelected(item: MenuItem): Boolean {
             // Handle action bar item clicks here. The action bar will
             // automatically handle clicks on the Home/Up button, so long
             // as you specify a parent activity in AndroidManifest.xml.
@@ -104,10 +105,9 @@ class MainActivity : AppCompatActivity() {
             return super.onOptionsItemSelected(item)
         }
 
-        fun onSupportNavigateUp(): Boolean {
+        override fun onSupportNavigateUp(): Boolean {
             val navController = findNavController(R.id.nav_host_fragment_content_main)
             return navController.navigateUp(appBarConfiguration)
                     || super.onSupportNavigateUp()
         }
     }
-}

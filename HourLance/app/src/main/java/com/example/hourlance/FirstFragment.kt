@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.ui.navigateUp
 import com.example.hourlance.databinding.FragmentFirstBinding
 
 class FirstFragment : Fragment() {
@@ -47,7 +48,7 @@ class FirstFragment : Fragment() {
 
         binding.newClientEntryButton.setOnClickListener {
             findNavController().navigate(R.id.action_FirstFragment_to_newClientEntryFragment)
-        }
+         }
     }
 
     override fun onDestroyView() {
