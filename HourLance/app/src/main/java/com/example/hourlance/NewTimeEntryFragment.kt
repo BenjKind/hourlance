@@ -6,7 +6,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
-import com.example.hourlance.databinding.FragmentFirstBinding
 import com.example.hourlance.databinding.FragmentNewTimeEntryBinding
 
 class NewTimeEntryFragment : Fragment() {
@@ -16,11 +15,12 @@ class NewTimeEntryFragment : Fragment() {
     // onDestroyView.
     private val binding get() = _binding!!
 
-    /*override fun onCreate(savedInstanceState: Bundle?) {
+    override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
         }
-    }*/
+
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -33,6 +33,10 @@ class NewTimeEntryFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        binding.buttonSaveTimeEntry.setOnClickListener {
+            findNavController().navigate(R.id.action_newTimeEntryFragment_to_FirstFragment)
+        }
     }
 
     override fun onDestroyView() {
