@@ -27,27 +27,28 @@ class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
 
     // MY VAR
-    private lateinit var toggle: ActionBarDrawerToggle
+    lateinit var toggle: ActionBarDrawerToggle
     //
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        var actionBar = supportActionBar
+        //var actionBar = supportActionBar
 
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        setSupportActionBar(findViewById(R.id.toolbar))
-        if (actionBar != null)
-            supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-        //
+        setSupportActionBar(findViewById(R.id.toolbar))
+
         val drawerLayout: DrawerLayout = findViewById(R.id.drawerLayout)
         val navView: NavigationView = findViewById(R.id.nav_view)
-
         val navController = findNavController(R.id.nav_host_fragment_content_main)
         appBarConfiguration = AppBarConfiguration(navController.graph, drawerLayout)
         setupActionBarWithNavController(navController, appBarConfiguration)
 
+        //if (actionBar != null)
+            supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
+        //
         toggle = ActionBarDrawerToggle(
             this,
             drawerLayout,
@@ -57,7 +58,7 @@ class MainActivity : AppCompatActivity() {
 
         drawerLayout.addDrawerListener(toggle)
         toggle.syncState()
-        //supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
         navView.setNavigationItemSelectedListener {
             when (it.itemId) {
                 R.id.nav_dashboard -> Toast.makeText(
@@ -101,10 +102,10 @@ class MainActivity : AppCompatActivity() {
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
-        if (toggle.onOptionsItemSelected(item)) {
-            return true
+        return when (item.itemId) {
+            R.id.drawerLayout -> true
+            else -> super.onOptionsItemSelected(item)
         }
-        return super.onOptionsItemSelected(item)
     }
 
     override fun onSupportNavigateUp(): Boolean {
