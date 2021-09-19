@@ -1,18 +1,18 @@
 package com.example.hourlance
 
-class ClientClass(
-    name: String,
-    projectType: String,
-    rate: Double,
-    overtimeRate: Double,
-    contactName: String,
-    contactPhone: Int,
-    contactEmail: String,
-    contactAddress: String,
-    contactState: String,
-    contactWebsite: String ) {
+data class ClientClass(
+    val name: String,
+    val projectType: String?,
+    val rate: Double,
+    val overtimeRate: Double?,
+    val contactName: String,
+    val contactPhone: Int,
+    val contactEmail: String,
+    val contactAddress: String,
+    val contactState: String,
+    val contactWebsite: String? ) {
 
-    // Required Data
+    /* Required Data
     var clientName: String = name
     var clientRate: Double = rate
     var clientContactName: String = contactName
@@ -22,7 +22,8 @@ class ClientClass(
     var clientContactState: String = contactState
 
     // Optional Data
-    var clientProjectType: String = ""
-    var clientOvertimeRate: Double = 0.0
-    var clientContactWebsite: String = ""
+    var clientProjectType: String? = projectType
+    var clientOvertimeRate: Double? = overtimeRate
+    var clientContactWebsite: String? = contactWebsite
+     */
 }
