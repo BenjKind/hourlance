@@ -9,11 +9,6 @@ import androidx.navigation.fragment.findNavController
 import com.example.hourlance.databinding.FragmentNewClientEntryBinding
 import com.example.hourlance.databinding.FragmentNewTimeEntryBinding
 
-/**
- * A simple [Fragment] subclass.
- * Use the [NewClientEntryFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class NewClientEntryFragment : Fragment() {
     private var _binding: FragmentNewClientEntryBinding? = null
     private val binding get() = _binding!!
@@ -44,4 +39,6 @@ class NewClientEntryFragment : Fragment() {
         super.onDestroyView()
         _binding = null
     }
+
+    var client = ClientClass("a","b",1.0,1.0,"c",1,"d","e","f","g")
 }

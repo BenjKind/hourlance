@@ -118,7 +118,18 @@
         app:layout_constraintTop_toBottomOf="@+id/textNewClientContactEmail" />
 
     <TextView
-        android:id="@+id/textNewClientContactWebsite"
+        android:id="@+id/textNewClientContactState"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="State"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.049"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textNewClientContactAddress" />
+
+    <TextView
+        android:id="@+id/textNewClientContactWebsite2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
@@ -126,7 +137,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.049"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textNewClientContactAddress" />
+        app:layout_constraintTop_toBottomOf="@+id/textNewClientContactState" />
 
     <EditText
         android:id="@+id/enterClientName"
@@ -188,70 +199,79 @@
         android:id="@+id/enterContactName"
         android:layout_width="240dp"
         android:layout_height="0dp"
-        android:layout_marginTop="332dp"
+        android:layout_marginTop="336dp"
         android:layout_marginEnd="30dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:minHeight="48dp"
+        android:selectAllOnFocus="true"
         android:text="Client"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:selectAllOnFocus="true"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/enterContactPhone"
         android:layout_width="240dp"
         android:layout_height="0dp"
-        android:layout_marginTop="380dp"
         android:layout_marginEnd="30dp"
         android:ems="10"
         android:inputType="phone"
         android:minHeight="48dp"
+        android:selectAllOnFocus="true"
         android:text="Phone"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:selectAllOnFocus="true"/>
+        app:layout_constraintTop_toBottomOf="@+id/enterContactName" />
 
     <EditText
         android:id="@+id/enterContactEmail"
         android:layout_width="240dp"
         android:layout_height="0dp"
-        android:layout_marginTop="428dp"
         android:layout_marginEnd="30dp"
         android:ems="10"
         android:inputType="textEmailAddress"
         android:minHeight="48dp"
+        android:selectAllOnFocus="true"
         android:text="Email"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:selectAllOnFocus="true"/>
+        app:layout_constraintTop_toBottomOf="@+id/enterContactPhone" />
 
     <EditText
         android:id="@+id/enterContactAddress"
         android:layout_width="240dp"
         android:layout_height="0dp"
-        android:layout_marginTop="476dp"
         android:layout_marginEnd="30dp"
         android:ems="10"
         android:inputType="textPostalAddress"
         android:minHeight="48dp"
+        android:selectAllOnFocus="true"
         android:text="Address"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:selectAllOnFocus="true"/>
+        app:layout_constraintTop_toBottomOf="@+id/enterContactEmail" />
 
     <EditText
-        android:id="@+id/enterContactWebsite"
+        android:id="@+id/enterContactState"
         android:layout_width="240dp"
         android:layout_height="0dp"
-        android:layout_marginTop="524dp"
         android:layout_marginEnd="30dp"
         android:ems="10"
         android:inputType="textNoSuggestions"
         android:minHeight="48dp"
+        android:selectAllOnFocus="true"
+        android:text="State"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/enterContactAddress" />
+
+    <EditText
+        android:id="@+id/enterContactWebsite2"
+        android:layout_width="240dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="30dp"
+        android:ems="10"
+        android:inputType="textNoSuggestions"
+        android:minHeight="48dp"
+        android:selectAllOnFocus="true"
         android:text="Website"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:selectAllOnFocus="true"/>
+        app:layout_constraintTop_toBottomOf="@+id/enterContactState" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

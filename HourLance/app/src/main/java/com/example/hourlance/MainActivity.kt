@@ -58,7 +58,7 @@ class MainActivity : AppCompatActivity() {
                 R.id.nav_dashboard -> {
                     navController.navigate(R.id.FirstFragment)
                     drawerLayout.close()
-                    if(navController.currentDestination == )
+                    //if(navController.currentDestination == )
                 }
                 R.id.nav_clients -> Toast.makeText(
                     applicationContext,
