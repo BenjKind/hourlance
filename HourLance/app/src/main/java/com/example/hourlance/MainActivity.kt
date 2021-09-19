@@ -1,9 +1,6 @@
 package com.example.hourlance
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
@@ -11,12 +8,9 @@ import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import android.view.Menu
 import android.view.MenuItem
-import android.view.View
 import android.widget.Toast
-import android.widget.Toolbar
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.drawerlayout.widget.DrawerLayout
-import androidx.navigation.NavController
 import androidx.navigation.fragment.findNavController
 import com.example.hourlance.databinding.ActivityMainBinding
 import com.google.android.material.navigation.NavigationView
@@ -63,27 +57,27 @@ class MainActivity : AppCompatActivity() {
             when (it.itemId) {
                 R.id.nav_dashboard -> Toast.makeText(
                     applicationContext,
-                    "Clicked Dashboard",
+                    "NOT IMPLEMENTED",
                     Toast.LENGTH_SHORT
                 ).show()
                 R.id.nav_clients -> Toast.makeText(
                     applicationContext,
-                    "Clicked Clients",
+                    "NOT IMPLEMENTED",
                     Toast.LENGTH_SHORT
                 ).show()
                 R.id.nav_invoices -> Toast.makeText(
                     applicationContext,
-                    "Clicked Invoices",
+                    "NOT IMPLEMENTED",
                     Toast.LENGTH_SHORT
                 ).show()
                 R.id.nav_calendar -> Toast.makeText(
                     applicationContext,
-                    "Clicked Calendar",
+                    "NOT IMPLEMENTED",
                     Toast.LENGTH_SHORT
                 ).show()
                 R.id.nav_settings -> Toast.makeText(
                     applicationContext,
-                    "Clicked Settings",
+                    "NOT IMPLEMENTED",
                     Toast.LENGTH_SHORT
                 ).show()
             }

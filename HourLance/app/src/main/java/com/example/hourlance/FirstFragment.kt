@@ -6,7 +6,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
-import androidx.navigation.ui.navigateUp
 import com.example.hourlance.databinding.FragmentFirstBinding
 
 class FirstFragment : Fragment() {
@@ -39,16 +38,21 @@ class FirstFragment : Fragment() {
                 binding.newTimeEntryButton.visibility = View.INVISIBLE
                 binding.newClientEntryButton.visibility = View.INVISIBLE
             }
-
         }
-
-        binding.newTimeEntryButton.setOnClickListener {
-            findNavController().navigate(R.id.action_FirstFragment_to_newTimeEntryFragment)
+        binding.FirstFragmentWhiteSpace.setOnClickListener {
+            binding.newTimeEntryButton.visibility = View.INVISIBLE
+            binding.newClientEntryButton.visibility = View.INVISIBLE
         }
 
         binding.newClientEntryButton.setOnClickListener {
+            Thread.sleep(100)
             findNavController().navigate(R.id.action_FirstFragment_to_newClientEntryFragment)
-         }
+        }
+
+        binding.newTimeEntryButton.setOnClickListener {
+            Thread.sleep(100)
+            findNavController().navigate(R.id.action_FirstFragment_to_newTimeEntryFragment)
+        }
     }
 
     override fun onDestroyView() {

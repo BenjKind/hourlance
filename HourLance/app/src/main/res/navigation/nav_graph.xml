@@ -20,6 +20,9 @@
         <action
             android:id="@+id/action_FirstFragment_to_newClientEntryFragment"
             app:destination="@id/newClientEntryFragment" />
+        <action
+            android:id="@+id/action_FirstFragment"
+            app:destination="@+id/FirstFragment"/>
     </fragment>
     <fragment
         android:id="@+id/SecondFragment"
