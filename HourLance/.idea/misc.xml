@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/kindb/Desktop/Developer Projects/HourLance/HourLance/app/src/main/res/drawable/ic_baseline_person_24.xml" value="0.26944444444444443" />
+        <entry key="..\:/Users/kindb/Desktop/Developer Projects/HourLance/HourLance/app/src/main/res/layout/activity_main.xml" value="0.18" />
+        <entry key="..\:/Users/kindb/Desktop/Developer Projects/HourLance/HourLance/app/src/main/res/layout/activity_menu_main_menu.xml" value="0.27136752136752135" />
+        <entry key="..\:/Users/kindb/Desktop/Developer Projects/HourLance/HourLance/app/src/main/res/layout/app_bar_menu_main_menu.xml" value="0.27136752136752135" />
+        <entry key="..\:/Users/kindb/Desktop/Developer Projects/HourLance/HourLance/app/src/main/res/layout/content_main.xml" value="0.1" />
+        <entry key="..\:/Users/kindb/Desktop/Developer Projects/HourLance/HourLance/app/src/main/res/layout/content_menu_main_menu.xml" value="0.27136752136752135" />
+        <entry key="..\:/Users/kindb/Desktop/Developer Projects/HourLance/HourLance/app/src/main/res/layout/fragment_first.xml" value="0.1" />
+        <entry key="..\:/Users/kindb/Desktop/Developer Projects/HourLance/HourLance/app/src/main/res/layout/fragment_gallery.xml" value="0.27136752136752135" />
+        <entry key="..\:/Users/kindb/Desktop/Developer Projects/HourLance/HourLance/app/src/main/res/layout/fragment_home.xml" value="0.27136752136752135" />
+        <entry key="..\:/Users/kindb/Desktop/Developer Projects/HourLance/HourLance/app/src/main/res/layout/fragment_new_client_entry.xml" value="0.4547008547008547" />
+        <entry key="..\:/Users/kindb/Desktop/Developer Projects/HourLance/HourLance/app/src/main/res/layout/fragment_new_time_entry.xml" value="0.4547008547008547" />
+        <entry key="..\:/Users/kindb/Desktop/Developer Projects/HourLance/HourLance/app/src/main/res/layout/fragment_second.xml" value="0.490036231884058" />
+        <entry key="..\:/Users/kindb/Desktop/Developer Projects/HourLance/HourLance/app/src/main/res/layout/fragment_slideshow.xml" value="0.27136752136752135" />
+        <entry key="..\:/Users/kindb/Desktop/Developer Projects/HourLance/HourLance/app/src/main/res/layout/nav_header.xml" value="0.1" />
+        <entry key="..\:/Users/kindb/Desktop/Developer Projects/HourLance/HourLance/app/src/main/res/layout/nav_header_menu_main_menu.xml" value="0.27136752136752135" />
+        <entry key="..\:/Users/kindb/Desktop/Developer Projects/HourLance/HourLance/app/src/main/res/menu/activity_main_drawer.xml" value="0.27136752136752135" />
+        <entry key="..\:/Users/kindb/Desktop/Developer Projects/HourLance/HourLance/app/src/main/res/menu/menu_main.xml" value="0.3307291666666667" />
+        <entry key="..\:/Users/kindb/Desktop/Developer Projects/HourLance/HourLance/app/src/main/res/menu/menu_main_menu.xml" value="0.27136752136752135" />
+        <entry key="..\:/Users/kindb/Desktop/Developer Projects/HourLance/HourLance/app/src/main/res/menu/nav_menu.xml" value="0.5" />
+        <entry key="..\:/Users/kindb/Desktop/Developer Projects/HourLance/HourLance/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.46794871794871795" />
+        <entry key="..\:/Users/kindb/Desktop/Developer Projects/HourLance/HourLance/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.46794871794871795" />
+        <entry key="..\:/Users/kindb/OneDrive/Desktop/Projects/HourLance/HourLance/app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="..\:/Users/kindb/OneDrive/Desktop/Projects/HourLance/HourLance/app/src/main/res/layout/content_main.xml" value="0.28940217391304346" />
+        <entry key="..\:/Users/kindb/OneDrive/Desktop/Projects/HourLance/HourLance/app/src/main/res/layout/fragment_first.xml" value="0.1" />
+        <entry key="..\:/Users/kindb/OneDrive/Desktop/Projects/HourLance/HourLance/app/src/main/res/layout/fragment_new_client_entry.xml" value="0.28940217391304346" />
+        <entry key="..\:/Users/kindb/OneDrive/Desktop/Projects/HourLance/HourLance/app/src/main/res/layout/fragment_new_time_entry.xml" value="0.25" />
+        <entry key="..\:/Users/kindb/OneDrive/Desktop/Projects/HourLance/HourLance/app/src/main/res/layout/fragment_second.xml" value="0.17831813576494426" />
+        <entry key="..\:/Users/kindb/OneDrive/Desktop/Projects/HourLance/HourLance/app/src/main/res/layout/nav_header.xml" value="0.1" />
+        <entry key="..\:/Users/kindb/OneDrive/Desktop/Projects/HourLance/HourLance/app/src/main/res/menu/menu_main.xml" value="0.2864583333333333" />
+        <entry key="..\:/Users/kindb/OneDrive/Desktop/Projects/HourLance/HourLance/app/src/main/res/menu/nav_menu.xml" value="0.36666666666666664" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.33" />
+      </ProjectState>
+    </option>
+  </component>
+</project>

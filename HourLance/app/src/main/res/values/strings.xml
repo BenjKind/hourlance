@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">Hour Lance</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="dashboard_fragment_label">Dashboard</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="new_time_entry_label">Time Entry</string>
+
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment"></string>
+    <string name="hello_second_fragment"></string>
+    <string name="new_user_OR_time_card">btn</string>
+    <string name="title_activity_menu_main_menu">menu_mainMenu</string>
+    <string name="navigation_drawer_open">Open</string>
+    <string name="navigation_drawer_close">Close</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+
+    <string name="user_userName">Username</string>
+    <string name="user_userEmail">Email</string>
+    <string name="button_newTimeEntry">Time Entry</string>
+    <string name="button_newClientEntry">Client Entry</string>
+    <string name="button_SaveEntry">SAVE</string>
+</resources>
