@@ -55,11 +55,11 @@ class MainActivity : AppCompatActivity() {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         navView.setNavigationItemSelectedListener {
             when (it.itemId) {
-                R.id.nav_dashboard -> Toast.makeText(
-                    applicationContext,
-                    "NOT IMPLEMENTED",
-                    Toast.LENGTH_SHORT
-                ).show()
+                R.id.nav_dashboard -> {
+                    navController.navigate(R.id.FirstFragment)
+                    drawerLayout.close()
+                    if(navController.currentDestination == )
+                }
                 R.id.nav_clients -> Toast.makeText(
                     applicationContext,
                     "NOT IMPLEMENTED",

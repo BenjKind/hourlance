@@ -6,6 +6,17 @@
     android:layout_height="match_parent"
     tools:context=".NewClientEntryFragment">
 
+    <Button
+        android:id="@+id/button_SaveClientEntry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:text="@string/button_SaveEntry"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.911"
+        app:layout_constraintStart_toStartOf="parent" />
+
     <TextView
         android:id="@+id/textNewClientClientName"
         android:layout_width="wrap_content"

@@ -10,9 +10,6 @@ import com.example.hourlance.databinding.FragmentNewTimeEntryBinding
 
 class NewTimeEntryFragment : Fragment() {
     private var _binding: FragmentNewTimeEntryBinding? = null
-
-    // This property is only valid between onCreateView and
-    // onDestroyView.
     private val binding get() = _binding!!
 
     override fun onCreate(savedInstanceState: Bundle?) {
