@@ -1,22 +1,14 @@
 package com.example.hourlance
 
-import android.content.Context
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.EditText
 import android.widget.Toast
-import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.fragment.findNavController
 import com.example.hourlance.databinding.FragmentNewClientEntryBinding
 import java.io.File
-import java.io.FileOutputStream
-import java.io.OutputStreamWriter
-import java.io.Writer
-import kotlin.math.log
 
 class NewClientEntryFragment : Fragment() {
     private var _binding: FragmentNewClientEntryBinding? = null
@@ -31,7 +23,7 @@ class NewClientEntryFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         _binding = FragmentNewClientEntryBinding.inflate(inflater, container, false)
         return binding.root
     }
@@ -54,6 +46,7 @@ class NewClientEntryFragment : Fragment() {
                     binding.enterContactState.text.toString(),
                     binding.enterContactWebsite.text.toString()
                 )
+
                 if (!saveClientEntryToFile(client)) {
                         Toast.makeText(
                             context,
@@ -72,17 +65,17 @@ class NewClientEntryFragment : Fragment() {
     }
 
     private fun saveClientEntryToFile(_client: ClientClass): Boolean {
+        val path: File? = context?.filesDir
+
         val fileName = "savedClients.txt"
-        val file = File(fileName)
+        val file = File(path, fileName)
         if (!file.exists())
             file.createNewFile()
-        Log.d("WARN","ABOUT TO SAVE")
-        Log.d("WARN","SAVED")
         return try {
             file.printWriter().use {
                 out->
                 out.println("Name/${_client.name}")
-                out.println("Project/${_client.projectType.toString()}")
+                out.println("Project/${_client.projectType}")
                 out.println("Rate/${_client.rate}")
                 out.println("OTRate/${_client.overtimeRate}")
                 out.println("contactName/${_client.contactName}")
@@ -93,22 +86,12 @@ class NewClientEntryFragment : Fragment() {
                 out.println("contactWebsite/${_client.contactWebsite}")
                 out.println("&&End of Client")
             }
-            Log.d("ERM", "File did try to write")
             true
         } catch (e: Exception) {
             e.printStackTrace()
             false
-        } finally {
-            Log.d("_____SUCCESS", "FILE WRITTEN TO ________")
         }
     }
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
-    }
-
-    var client = ClientClass("a","b",1.0,1.0,"c",1,"d","e","f","g")
 
     private fun checkInputs(): Boolean {
         if ( binding.enterClientName.text.toString() == "Name" ||
@@ -134,5 +117,10 @@ class NewClientEntryFragment : Fragment() {
         )
             return false
         return true
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 }
