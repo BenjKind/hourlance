@@ -47,7 +47,6 @@ class FirstFragment : Fragment() {
 
         binding.newClientEntryButton.setOnClickListener {
             Thread.sleep(100)
-            Log.d("WARN", "BUTTON PUSHED!!!")
             findNavController().navigate(R.id.action_FirstFragment_to_newClientEntryFragment)
         }
 

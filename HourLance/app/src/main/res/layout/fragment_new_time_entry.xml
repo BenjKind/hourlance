@@ -62,7 +62,7 @@
         android:inputType="time"
         android:minHeight="48dp"
         android:selectAllOnFocus="true"
-        android:text="Type"
+        android:text="Time"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/enterTimeDate" />
 
