@@ -5,14 +5,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.DatePicker
 import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import com.example.hourlance.databinding.FragmentNewClientEntryBinding
 import java.io.File
-
-import kotlinx.android.synthetic.main.fragment_new_client_entry.*
 
 import java.time.LocalDate
 import java.time.LocalDateTime

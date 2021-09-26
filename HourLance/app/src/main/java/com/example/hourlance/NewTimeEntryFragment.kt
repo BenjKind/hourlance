@@ -15,48 +15,55 @@ import java.io.File
 import java.text.SimpleDateFormat
 import java.util.*
 
+
 class NewTimeEntryFragment : Fragment() {
     private var _binding: FragmentNewTimeEntryBinding? = null
     private val binding get() = _binding!!
 
     // USING https://www.tutorialkart.com/kotlin-android/android-datepicker-kotlin-example/
-    // START
     var button_date: Button? = null
     var cal = Calendar.getInstance()
-    val dateSetListener =
-        DatePickerDialog.OnDateSetListener { _, year, monthOfYear, dayOfMonth ->
-            cal.set(Calendar.YEAR, year)
-            cal.set(Calendar.MONTH, monthOfYear)
-            cal.set(Calendar.DAY_OF_MONTH, dayOfMonth)
-            updateDateInView()
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+        // UPDATE BUTTON TO DATE AFTER SETTING
+        val dateSetListener =
+            DatePickerDialog.OnDateSetListener { view, year, monthOfYear, dayOfMonth ->
+                cal.set(Calendar.YEAR, year)
+                cal.set(Calendar.MONTH, monthOfYear)
+                cal.set(Calendar.DAY_OF_MONTH, dayOfMonth)
+                updateDateInView()
+            }
+
+        button_date!!.setOnClickListener {
+            DatePickerDialog(
+                this@MainActivity,
+                dateSetListener,
+                cal.get(Calendar.YEAR),
+                cal.get(Calendar.MONTH),
+                cal.get(Calendar.DAY_OF_MONTH)
+            ).show()
         }
+    }
+
     private fun updateDateInView() {
         val myFormat = "MM/dd/yyyy"
         val sdf = SimpleDateFormat(myFormat, Locale.US)
         button_date!!.text = sdf.format(cal.time)
-    }
-    button_date!!.setOnClickListener(object : View.OnClickListener {
-        override fun onClick(view: View) {
-            DatePickerDialog(this@MainActivity,
-            dateSetListener,
-            cal.get(Calendar.YEAR),
-            cal.get(Calendar.MONTH),
-            cal.get(Calendar.DAY_OF_MONTH)).show()
-        }
-    })
-    // END
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-        }
-
     }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        val dateSetListener =
+            DatePickerDialog.OnDateSetListener { _, year, month, dayOfMonth ->
+                cal.set(Calendar.YEAR, year)
+                cal.set(Calendar.MONTH, month)
+                cal.set(Calendar.DAY_OF_MONTH, dayOfMonth)
+                updateDateInView()
+            }
 
         _binding = FragmentNewTimeEntryBinding.inflate(inflater, container, false)
         return binding.root
@@ -69,7 +76,7 @@ class NewTimeEntryFragment : Fragment() {
             if(checkInputs()) {
                 Thread.sleep(100)
                 val timeEntry = TimeEntryClass(
-                    binding.enterTimeDate.text.toString().toInt(),
+                    cal,
                     binding.enterTimeTime.text.toString().toInt(),
                     binding.enterClient.text.toString()
                 )
@@ -113,8 +120,7 @@ class NewTimeEntryFragment : Fragment() {
     }
 
     private fun checkInputs(): Boolean {
-        if ( binding.enterTimeDate.text.toString() == "Date" ||
-            binding.enterTimeDate.text.toString() == "" ||
+        if (
             binding.enterTimeTime.text.toString() == "Time" ||
             binding.enterTimeTime.text.toString() == "" ||
             binding.enterClient.text.toString() == "Client" ||
