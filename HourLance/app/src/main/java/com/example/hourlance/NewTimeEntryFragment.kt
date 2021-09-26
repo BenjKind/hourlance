@@ -1,18 +1,50 @@
 package com.example.hourlance
 
+import android.app.DatePickerDialog
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import android.widget.DatePicker
 import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import com.example.hourlance.databinding.FragmentNewTimeEntryBinding
 import java.io.File
+import java.text.SimpleDateFormat
+import java.util.*
 
 class NewTimeEntryFragment : Fragment() {
     private var _binding: FragmentNewTimeEntryBinding? = null
     private val binding get() = _binding!!
+
+    // USING https://www.tutorialkart.com/kotlin-android/android-datepicker-kotlin-example/
+    // START
+    var button_date: Button? = null
+    var cal = Calendar.getInstance()
+    val dateSetListener =
+        DatePickerDialog.OnDateSetListener { _, year, monthOfYear, dayOfMonth ->
+            cal.set(Calendar.YEAR, year)
+            cal.set(Calendar.MONTH, monthOfYear)
+            cal.set(Calendar.DAY_OF_MONTH, dayOfMonth)
+            updateDateInView()
+        }
+    private fun updateDateInView() {
+        val myFormat = "MM/dd/yyyy"
+        val sdf = SimpleDateFormat(myFormat, Locale.US)
+        button_date!!.text = sdf.format(cal.time)
+    }
+    button_date!!.setOnClickListener(object : View.OnClickListener {
+        override fun onClick(view: View) {
+            DatePickerDialog(this@MainActivity,
+            dateSetListener,
+            cal.get(Calendar.YEAR),
+            cal.get(Calendar.MONTH),
+            cal.get(Calendar.DAY_OF_MONTH)).show()
+        }
+    })
+    // END
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

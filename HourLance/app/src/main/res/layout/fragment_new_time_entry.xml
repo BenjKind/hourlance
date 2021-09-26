@@ -39,7 +39,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
+    <!--EditText
         android:id="@+id/enterTimeDate"
         android:layout_width="240dp"
         android:layout_height="0dp"
@@ -51,12 +51,13 @@
         android:selectAllOnFocus="true"
         android:text="Date"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent" /-->
 
     <EditText
         android:id="@+id/enterTimeTime"
         android:layout_width="240dp"
         android:layout_height="0dp"
+        android:layout_marginTop="108dp"
         android:layout_marginEnd="60dp"
         android:ems="10"
         android:inputType="time"
@@ -64,7 +65,7 @@
         android:selectAllOnFocus="true"
         android:text="Time"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/enterTimeDate" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/enterClient"
@@ -90,5 +91,24 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.911"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/buttonSelectDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="60dp"
+        android:text="Date"
+        app:layout_constraintStart_toEndOf="@+id/textNewTimeEntryDate"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <DatePicker
+        android:id="@+id/datePicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
