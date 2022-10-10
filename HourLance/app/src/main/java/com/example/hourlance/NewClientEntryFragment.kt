@@ -1,19 +1,14 @@
 package com.example.hourlance
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.hourlance.databinding.FragmentNewClientEntryBinding
 import java.io.File
-
-import java.time.LocalDate
-import java.time.LocalDateTime
-import java.time.LocalTime
-import java.time.Month
 
 class NewClientEntryFragment : Fragment() {
     private var _binding: FragmentNewClientEntryBinding? = null

@@ -6,5 +6,4 @@ data class TimeEntryClass(
     val timeDate: Calendar,
     val timeTime: Int,
     val timeClient: String
-) {
-}
+)
